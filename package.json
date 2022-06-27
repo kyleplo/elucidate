@@ -1,6 +1,6 @@
 {
   "name": "@kyleplo/elucidate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple, light syntax highlighter for the web.",
   "keywords": [
     "syntax-highlighter"
@@ -13,6 +13,9 @@
     "url": "https://kyleplo.com"
   },
   "main": "bundle.min.js",
+  "files": [
+    "bundle.min.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/kyleplo/elucidate.git"
