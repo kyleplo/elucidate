@@ -2,7 +2,9 @@
   "name": "@kyleplo/elucidate",
   "version": "0.0.1",
   "description": "Simple, light syntax highlighter for the web.",
-  "keywords": ["syntax-highlighter"],
+  "keywords": [
+    "syntax-highlighter"
+  ],
   "homepage": "https://github.com/kyleplo/elucidate#readme",
   "bugs": "https://github.com/kyleplo/elucidate/issues",
   "license": "MIT",
@@ -16,10 +18,10 @@
     "url": "https://github.com/kyleplo/elucidate.git"
   },
   "scripts": {
-    "build": "rollup elucidate.js --file bundle.js --format iife && uglifyjs -o undle.min.js bundle.js"
+    "build": "rollup elucidate.js --name elucidate --file bundle.js --format iife && uglifyjs -o bundle.min.js bundle.js"
   },
   "devDependencies": {
-    "rollup": "2.75.7^",
-    "uglify": "3.16.1^"
+    "rollup": "^2.75.7",
+    "uglify-js": "^3.16.1"
   }
 }
