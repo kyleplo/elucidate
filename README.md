@@ -1,6 +1,14 @@
 # elucidate
 Simple, light syntax highlighter for the web.
 
+## Installation
+Get the library from NPM
+```
+npm install @kyleplo/elucidate
+```
+
+Or download and host `bundle.min.js`
+
 ## Usage
 Import the library as an ES6 module
 ```js
