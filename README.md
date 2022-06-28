@@ -1,20 +1,35 @@
 # elucidate
 Simple, light syntax highlighter for the web.
 
+See the [hosted demo](https://gh.kyleplo.com/elucidate/)
+
 ## Installation
 Get the library from NPM
 ```
 npm install @kyleplo/elucidate
 ```
 
-Or download and host `bundle.min.js`
+## Importing
+This library supports usage as both an ES6 module and a CommonJS module, as well as in the browser.
 
-## Usage
-Import the library as an ES6 module
+### ES6
 ```js
-import elucidate from "./elucidate"
+import elucidate from "@kyleplo/elucidate"
 ```
 
+### CommonJS
+```js
+const elucidate = require("@kyleplo/elucidate");
+```
+
+### Browser
+```html
+<script src="https://gh.kyleplo.com/elucidate/bundle.min.js" defer></script>
+```
+
+Or host `bundle.min.js` yourself.
+
+## Usage
 Get syntax highlighting HTML
 ```js
 elucidate(`

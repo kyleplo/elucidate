@@ -13,8 +13,13 @@
     "url": "https://kyleplo.com"
   },
   "main": "bundle.min.js",
+  "exports": {
+    "import": "./bundle.js",
+    "require": "./bundle.min.js"
+  },
   "files": [
-    "bundle.min.js"
+    "bundle.min.js",
+    "bundle.js"
   ],
   "repository": {
     "type": "git",
