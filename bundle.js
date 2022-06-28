@@ -242,7 +242,7 @@ var elucidate = (function () {
         output += "<br>";
         i += 1;
       }else {
-        if(mayBeDefault && code[i] !== " " && code[i] !== "\t"){
+        if(mayBeDefault && ((code[i] !== " " && code[i] !== "\t") || i === 0)){
           output += makeTags("default");
           mayBeDefault = false;
         }
