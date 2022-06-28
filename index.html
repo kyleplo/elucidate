@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elucidate Demo</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #editor, #highlighting {
+        position: fixed;
+        top: 2em;
+        left: 0px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        outline: none;
+        width: 100%;
+        height: calc(100vh - 2.5em);
+        background: transparent;
+        border: none;
+        font-size: inherit;
+        padding: 5px;
+      }
+
+      #editor {
+        color: transparent;
+        caret-color: black;
+      }
+
+      .elucidate-symbol {
+        color: cyan;
+        font-weight: bold;
+      }
+
+      .elucidate-keyword {
+        color: blue;
+        font-weight: bold;
+      }
+
+      .elucidate-comment {
+        color: green;
+      }
+
+      .elucidate-string {
+        color: orange;
+      }
+
+      .elucidate-number {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Language: <select id="language">
+      <option value="agnostic">Agnostic</option>
+      <option value="actionscript">ActionScript</option>
+      <option value="c">C</option>
+      <option value="csharp">C#</option>
+      <option value="cplusplus">C++</option>
+      <option value="coffeescript">CoffeeScript</option>
+      <option value="css">CSS</option>
+      <option value="csv">CSV</option>
+      <option value="golang">Golang</option>
+      <option value="html">HTML</option>
+      <option value="java">Java</option>
+      <option value="javascript" selected>JavaScript</option>
+      <option value="json">JSON</option>
+      <option value="lua">Lua</option>
+      <option value="markdown">Markdown</option>
+      <option value="php">PHP</option>
+      <option value="python">Python</option>
+      <option value="ruby">Ruby</option>
+      <option value="scss">SCSS</option>
+      <option value="tsv">TSV</option>
+      <option value="typescript">TypeScript</option>
+      <option value="xml">XML</option>
+      <option value="yaml">YAML</option>
+    </select></p>
+    <div id="highlighting"></div>
+    <textarea id="editor">for(var i = 0;i < 4;i++){
+  // use modulus to determine if i is odd or even
+  if(i % 2){
+    console.log(i + " is an odd number");
+  }else{
+    console.log(i + " is an even number");
+  }
+}</textarea>
+    <script src="./bundle.min.js" defer></script>
+    <script>
+      function highlight(){
+        document.querySelector("#highlighting").innerHTML = elucidate(document.querySelector("#editor").value, document.querySelector("#language").value);
+      }
+
+      window.addEventListener("load", () => {
+        highlight();
+        document.querySelector("#editor").addEventListener("keyup", highlight);
+        document.querySelector("#language").addEventListener("change", highlight);
+      });
+    </script>
+  </body>
+</html>
