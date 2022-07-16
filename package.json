@@ -12,21 +12,23 @@
     "name": "Kyle Plosky",
     "url": "https://kyleplo.com"
   },
-  "main": "bundle.min.js",
+  "main": "./build/bundle.umd.min.js",
   "exports": {
-    "import": "./bundle.js",
-    "require": "./bundle.min.js"
+    "import": "./build/bundle.esm.min.js",
+    "require": "./build/bundle.umd.min.js"
   },
   "files": [
-    "bundle.min.js",
-    "bundle.js"
+    "./build/bundle.esm.min.js",
+    "./build/bundle.umd.min.js"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/kyleplo/elucidate.git"
   },
   "scripts": {
-    "build": "rollup elucidate.js --name elucidate --file bundle.js --format iife && uglifyjs -o bundle.min.js bundle.js"
+    "build": "npm run build-umd && npm run build-esm",
+    "build-umd": "rollup elucidate.js --name elucidate --file build/bundle.umd.js --format umd && uglifyjs -o build/bundle.umd.min.js build/bundle.umd.js",
+    "build-esm": "rollup elucidate.js --name elucidate --file build/bundle.esm.js --format esm && uglifyjs -o build/bundle.esm.min.js build/bundle.esm.js"
   },
   "devDependencies": {
     "rollup": "^2.75.7",
