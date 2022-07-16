@@ -1,6 +1,6 @@
 {
   "name": "@kyleplo/elucidate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple, light syntax highlighter for the web.",
   "keywords": [
     "syntax-highlighter"
