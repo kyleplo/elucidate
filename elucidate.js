@@ -9,6 +9,8 @@ function resolveLanguageProperty(language, property){
 }
 
 export default (code, languageName = "agnostic") => {
+  var languageName = languages[languageName] ? languageName : "agnostic";
+
   const language = {
     strings: resolveLanguageProperty(languageName, "strings"),
     escape: resolveLanguageProperty(languageName, "escape"),
