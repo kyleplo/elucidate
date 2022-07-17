@@ -1,6 +1,6 @@
 {
   "name": "@kyleplo/elucidate",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple, light syntax highlighter for the web.",
   "keywords": [
     "syntax-highlighter"
@@ -12,14 +12,14 @@
     "name": "Kyle Plosky",
     "url": "https://kyleplo.com"
   },
-  "main": "./build/bundle.umd.min.js",
+  "main": "build/bundle.umd.min.js",
   "exports": {
     "import": "./build/bundle.esm.min.js",
     "require": "./build/bundle.umd.min.js"
   },
   "files": [
-    "./build/bundle.esm.min.js",
-    "./build/bundle.umd.min.js"
+    "build/bundle.esm.min.js",
+    "build/bundle.umd.min.js"
   ],
   "repository": {
     "type": "git",
